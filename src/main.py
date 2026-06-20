@@ -3,7 +3,7 @@ import sys
 from loguru import logger
 import requests
 
-version = "0.1.0-beta.3"
+version = "v0.1.0"
 
 @logger.catch()
 def main():
@@ -34,7 +34,10 @@ def check_update():
     repo = "self-Update"
     latest_release_url = f"https://api.github.com/repos/{username}/{repo}/releases/latest"
     response = requests.get(latest_release_url)
-
+    if response.status_code != 200:
+        logger.error("Failed to fetch latest release information.")
+        logger.debug(f"Response status code: {response.status_code}, Response text: {response.text}")
+        return
     release_data = response.json()
     logger.debug(release_data)
     latest_version = release_data["tag_name"]
