@@ -3,7 +3,7 @@ import sys
 from loguru import logger
 import requests
 
-version = "v0.1.0"
+version = "v0.1.1"
 
 @logger.catch()
 def main():
@@ -30,7 +30,7 @@ def main():
 
 @logger.catch(level="WARNING")
 def check_update(): 
-    username = "grish"
+    username = "grish-ka"
     repo = "self-Update"
     latest_release_url = f"https://api.github.com/repos/{username}/{repo}/releases/latest"
     response = requests.get(latest_release_url)
