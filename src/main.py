@@ -3,11 +3,13 @@ import sys
 from loguru import logger
 import requests
 
-version = "v0.1.1"
+version = "v0.1.2"
 
 @logger.catch()
 def main():
+    logger.remove()
     logger.add("./logs/self-Update_{time}.log", level="INFO", retention="1 days", rotation="500 MB", compression="zip")
+    logger.add(sys.stdout, level="INFO")       
     parser = argparse.ArgumentParser(prog="self-Update", description="Update itself")
     parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose output")
     parser.add_argument("--version", action="version", version=version)
@@ -44,12 +46,12 @@ def check_update():
     logger.debug(f"Latest version: {latest_version}, Current version: {version}")
 
     if latest_version != version:
-        logger.info(f"New version available: {latest_version}. Current version: {version}.")
+        logger.opt(colors=True).warning(f"New version available: <green>{latest_version}</green>. Current version: <red>{version}</red>.")
     else:
         logger.debug(f"You are using the latest version: {version}.")
 
 def program(args):
-    logger.info(f"TEXT: {args.text}")
+    logger.opt(colors=True).info(f"TEXT: <blue>{args.text}</blue>")
 
 if __name__ == "__main__":
     main()
