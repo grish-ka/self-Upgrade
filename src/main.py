@@ -3,7 +3,7 @@ import sys
 from loguru import logger
 import requests
 
-version = "v0.1.2"
+version = "v1.0.0"
 
 @logger.catch()
 def main():

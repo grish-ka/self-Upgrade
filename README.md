@@ -11,3 +11,6 @@ foo@bar ~/prj/update-Self$ pip install -r requirements.txt
 ```bash
 foo@bar ~/prj/update-Self$ python ./src/main.py --help
 ```
+
+## versions
+![table](https://go-pkg.vercel.app/api?project=self-Update&data=python%3Av1.0.0-u%2Canything%20else%3Av1.0.0-u)
