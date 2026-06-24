@@ -3,9 +3,9 @@ requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "self_Update"
-version = "26.2.0.1"
-description = "self_update library"
+name = "self_Upgrade"
+version = "26.2.0.2"
+description = "Self-Upgradeing library"
 readme = "README.md"
 dependencies = [
   "loguru",

@@ -3,7 +3,7 @@ import sys
 from loguru import logger
 from . import check_update
 
-version = "v26.2.0.1"
+version = "v26.2.0.2"
 
 @logger.catch()
 def main():
@@ -26,7 +26,7 @@ def main():
     logger.info("System loaded successfully.")
 
     # update logic
-    check_update("grish-ka", "self-Update", version)
+    check_update("grish-ka", "self-Upgrade", version)
 
     program(args)
 
