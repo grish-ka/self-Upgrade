@@ -1,9 +1,9 @@
 import argparse
 import sys
 from loguru import logger
-from . import check_update
+from __init__ import check_update
 
-version = "v26.2.0.2"
+version = "v26.2.0.3"
 
 @logger.catch()
 def main():
