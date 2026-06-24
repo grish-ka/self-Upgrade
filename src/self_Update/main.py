@@ -3,7 +3,7 @@ import sys
 from loguru import logger
 from . import check_update
 
-version = "v1.1.0-rc.1.0.0"
+version = "v26.2.0.1"
 
 @logger.catch()
 def main():
