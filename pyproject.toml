@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self_Update"
+version = "26.1.1.0"
+description = "self_update library"
+readme = "README.md"
+dependencies = [
+  "loguru",
+  "requests",
+]
+
+# --- Main project keys go here before any sub-tables ---
+authors = [
+  {name = "Grish-ka", email = "nope@no.stop"},
+]
+maintainers = [
+  {name = "Grish-ka", email = "nope@no.stop"},
+]
+
+# --- Sub-tables go at the very bottom ---
+[project.optional-dependencies]
+cli = [
+  "loguru",
+]
+
+[project.scripts]
+self-update-cli = "self_Update.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

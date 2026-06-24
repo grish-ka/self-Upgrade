@@ -1,7 +1,7 @@
 import argparse
 import sys
 from loguru import logger
-import lib
+from . import check_update
 
 version = "v1.1.0-rc.1.0.0"
 
@@ -26,7 +26,7 @@ def main():
     logger.info("System loaded successfully.")
 
     # update logic
-    lib.check_update("grish-ka", "self-Update", version)
+    check_update("grish-ka", "self-Update", version)
 
     program(args)
 
