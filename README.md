@@ -1,16 +1,11 @@
 # self-Update
-python self updater
+a python library for gihub projects to slef-update
 
 ## installation
-1. clone the latest version (ou knmow how `git clobe <LINK TO THE REPO>`)
-2. install librarys
+1. install on pypi
 ```bash
-foo@bar ~/prj/update-Self$ pip install -r requirements.txt
-``` 
-3. run it
-```bash
-foo@bar ~/prj/update-Self$ python ./src/main.py --help
+foo@bar ~/prj/update-Self$ pip install self-Upgrade
 ```
 
 ## versions
-![table](https://go-pkg.vercel.app/api?project=self-Update&data=python%3Av1.0.0-u%2Canything%20else%3Av1.0.0-u)
+![table](https://go-pkg.vercel.app/api?project=self-Update&data=python%20source%3Av26.2.0.4-u%2CPYPI%3Av26.2.0.4-u)
