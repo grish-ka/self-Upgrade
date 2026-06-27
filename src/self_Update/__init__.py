@@ -32,10 +32,8 @@ def check_update(username, repo, version):
                 f"New version available: <green>{latest_version_str}</green>. "
                 f"Current version: <red>{version}</red>."
             )
-            return True, latest_version_str # True = Update Needed!
         else:
             logger.debug(f"You are using the latest version: {version}.")
-            return False, latest_version_str # False = You are good to go!
             
     except version.InvalidVersion:
         logger.warning(f"Could not parse version strings for comparison (Latest: {latest_version_str}, Current: {version})")
