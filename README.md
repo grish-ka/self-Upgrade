@@ -8,4 +8,4 @@ foo@bar ~/prj/update-Self$ pip install self-Upgrade
 ```
 
 ## versions
-![table](https://go-pkg.vercel.app/api?project=self-Update&data=python%20source%3Av26.3.0.1-u%2CPYPI%3Av26.3.0.1-u)
+![table](https://go-pkg.vercel.app/api?project=self-Update&data=python%20source%3Av26.3.0.2-u%2CPYPI%3Av26.3.0.2-u)

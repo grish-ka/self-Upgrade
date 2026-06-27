@@ -1,16 +1,15 @@
 [build-system]
-requires = ["setuptools >= 77.0.3"]
+requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "self-Upgrade"
-version = "26.3.0.1"
+version = "26.3.0.2"
 description = "Self-Upgradeing library"
 readme = "README.md"
-dependencies = [
-  "loguru",
-  "requests",
-]
+
+# Tell the builder that dependencies are handled dynamically
+dynamic = ["dependencies"]
 
 # --- Main project keys go here before any sub-tables ---
 authors = [
@@ -31,3 +30,8 @@ self-update-cli = "self_Update.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+# --- THE FIX IS HERE ---
+[tool.setuptools.dynamic]
+# This tells setuptools to read your dependencies straight out of requirements.txt
+dependencies = {file = ["requirements.txt"]}
